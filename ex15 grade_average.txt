@@ -1,0 +1,43 @@
+                                                            Algoritheme grade_average
+
+variable
+       M,A,B,C : Reel
+Debut
+  ecrire("type the first note:")
+  lire("A")
+  ecrire("type the second note:")
+  lire("B")
+  ecrire("type the third note:")
+  lire("C")
+  tantque A<0 ou A>20 faire
+     ecrire("type in the first note a number between 0 and 20 : ")
+     lire("A")
+  fin tantque
+  tantque B<0 ou B>20 faire
+     ecrire("type in the second note a number between 0 and 20 : ")
+     lire("A")
+  fin tantque
+  tantque C<0 ou C>20 faire
+     ecrire("type in the third note a number between 0 and 20 : ")
+     lire("A")
+  fin tantque
+  M<--(A+B+C)/3
+  si M>=16 Alors
+     ecrire("very good")
+  sinon
+     si M>=14 et M<16 Alors
+        ecrire("good")
+     sinon  
+        si M>=12 et M<14 Alors
+           ecrire("fairly good")
+        sinon  
+           si M>=10 et M<12 Alors
+              ecrire("fair")
+           sinon
+              ecrire("unsatisfactory")
+           fin si
+        fin si
+     fin si
+  fin si
+  ecrire("the average grade is",M)
+fin
